@@ -1,0 +1,154 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+
+"Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'fatih/vim-go'
+"Plugin 'dgryski/vim-godef'
+"Plugin 'bradfitz/goimports'
+"Plugin 'majutsushi/tagbar'
+"Plugin 'jstemmer/gotags'
+"Plugin 'scrooloose/syntastic'
+
+"Plugin 'crooloose/nerdcommenter'
+"Plugin 'tomtom/tcomment_vim'
+
+"Plugin 'Yggdroot/indentLine'
+" plugin from http://vim-scripts.org/vim/scripts.html
+"Plugin 'OmniCppComplete'
+Plugin 'AutoComplPop'
+"Plugin 'L9'
+" Git plugin not hosted on GitHub
+"Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/downloads/go-release-branch.go1.3/misc/vim/'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+"Plugin 'user/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+" #################
+" origin configured
+" #################
+
+
+syntax on
+"fileType on
+"set list
+"set showmatch
+"set fileformat  显示当前文件格式 (unix,dos)
+"set modifiable
+set number
+set scrolloff=110
+"nnoremap j jzz
+"nnoremap k kzz
+"auto insertleave,cursormoved * normal! zz
+set smarttab     "按一下 Backspace 就删除 4 个空格
+set tabstop=4
+set expandtab
+set incsearch
+set ignorecase
+set autoindent   "回车后自动继承前一行的缩进方式
+set smartindent  "右花括号和#开头的不缩进
+set shiftwidth=4 "reindent 操作（<<和>>）时缩进的列数
+set completeopt=menuone
+set fileencodings=utf-8,gbk "ucs-bom,utf-8,cp936,gb18030,big5,latin1
+
+""""""""""""""""
+"".vim/template/c
+"if filereadable("/home/yx32/.vim/template/c")
+"    autocmd BufNewFile *.c 0 read /home/yx32/.vim/template/c
+"endif
+"
+"".vim/template/cpp
+"if filereadable("/home/yx32/.vim/template/cpp")
+"    autocmd BufNewFile *.cpp 0 read /home/yx32/.vim/template/cpp
+"endif
+"
+"autocmd FileType c set omnifunc=ccomplete#Complete
+"autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+"autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+"autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+"autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+"autocmd FileType python set omnifunc=pythoncomplete#Complete
+"autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+""""""""""""""""
+
+au BufRead,BufNewFile *.go  set filetype=go "go highlight
+
+":inoremap <CR> <ESC>zzo
+":inoremap <expr> <CR>  pumvisible()?"\<C-Y>":"\<CR>"
+:inoremap ( ()<ESC>i
+:inoremap ) <c-r>=ClosePair(')')<CR>
+:inoremap [ []<ESC>i
+:inoremap ] <c-r>=ClosePair(']')<CR>
+:inoremap { {<CR>}<ESC>kA
+:inoremap } <c-r>=ClosePair('}')<CR>
+:inoremap " <c-r>=ClosePair('"')<CR>
+:inoremap ' <c-r>=ClosePair("'")<CR>
+
+":inoremap <c-o> <c-x><c-o>
+"inoremap <Tab> <C-R>=CleverTab()<CR>
+
+function! CleverTab()
+   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+      return "\<Tab>"
+   else
+      return "\<C-X>\<C-O>"
+   endif
+endfunction
+
+
+
+"function delete a pair
+function! ClosePair(char)
+    if getline('.')[col('.') - 1] == a:char     "have paired,right shift
+        return "\<Right>"
+    else                                        "not paired,two char
+        if a:char == '"'
+        return "\"\"\<Left>"
+    else
+        if a:char == "'"
+        return "''\<Left>"
+    else
+        return a:char
+    endif
+    endif
+    endif
+endfunction
+
+
+"vim-go
+let g:go_fmt_fail_silently = 1 
+let g:go_highlight_functions = 1 
+let g:go_highlight_methods = 1 
+let g:go_highlight_structs = 1 
+let g:go_highlight_operators = 1 
+let g:go_highlight_build_constraints = 1 

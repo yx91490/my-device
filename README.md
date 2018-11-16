@@ -58,8 +58,6 @@ deb http://mirrors.ustc.edu.cn/ubuntu/ cosmic-security main restricted universe 
 
 ##### ~/.bashrc配置
 
-
-
 ```shell
 # 配置终端提示符颜色：
 if [ "$color_prompt" = yes ]; then
@@ -117,7 +115,7 @@ alias cformat='clang-format-3.5 -style="{BasedOnStyle: llvm, IndentWidth: 4}" -i
 ```
 ##### ~/.vimrc配置
 
-见文件
+见文件[vimrc](./vimrc)
 
 ### 应用软件
 
