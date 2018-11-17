@@ -42,17 +42,17 @@ deb http://mirrors.ustc.edu.cn/ubuntu/ cosmic-security main restricted universe 
 
 配置鼠标和触摸板：
 
-![](/home/user/repo/my_linux_environment/pic/config_mouse.png)
+![](./pic/config_mouse.png)
 
 
 
 使用gnome-tweak-tool配置字体和缩放比例:
 
-![](/home/user/repo/my_linux_environment/pic/config_font.png)
+![](./pic/config_font.png)
 
 安装sierra主题和numix图标，并使用gnome-tweak-tool应用主题和图标：
 
-![](/home/user/repo/my_linux_environment/pic/config_theme.png)
+![](./pic/config_theme.png)
 
 ### 命令行配置
 
