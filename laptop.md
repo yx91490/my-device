@@ -65,3 +65,5 @@
 - 三指左右滑动：切换应用。
 
 - 四指点击：快速打开操作中心。
+
+> https://support.microsoft.com/zh-cn/help/4027871/windows-10-touchpad-gestures
