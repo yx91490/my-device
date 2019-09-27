@@ -1,4 +1,5 @@
 [core]
-	autocrlf = input
+    autocrlf = input
     quotepath = false
     editor = vim
+    excludesFile = "~/.gitignore_global"
