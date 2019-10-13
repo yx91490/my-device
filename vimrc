@@ -73,6 +73,7 @@ set scrolloff=110
 set smarttab     "按一下 Backspace 就删除 4 个空格
 set tabstop=4
 set expandtab
+set hlsearch
 set incsearch
 set ignorecase
 set autoindent   "回车后自动继承前一行的缩进方式
@@ -105,14 +106,14 @@ au BufRead,BufNewFile *.go  set filetype=go "go highlight
 
 ":inoremap <CR> <ESC>zzo
 ":inoremap <expr> <CR>  pumvisible()?"\<C-Y>":"\<CR>"
-:inoremap ( ()<ESC>i
-:inoremap ) <c-r>=ClosePair(')')<CR>
-:inoremap [ []<ESC>i
-:inoremap ] <c-r>=ClosePair(']')<CR>
-:inoremap { {<CR>}<ESC>kA
-:inoremap } <c-r>=ClosePair('}')<CR>
-:inoremap " <c-r>=ClosePair('"')<CR>
-:inoremap ' <c-r>=ClosePair("'")<CR>
+":inoremap ( ()<ESC>i
+":inoremap ) <c-r>=ClosePair(')')<CR>
+":inoremap [ []<ESC>i
+":inoremap ] <c-r>=ClosePair(']')<CR>
+":inoremap { {<CR>}<ESC>kA
+":inoremap } <c-r>=ClosePair('}')<CR>
+":inoremap " <c-r>=ClosePair('"')<CR>
+":inoremap ' <c-r>=ClosePair("'")<CR>
 
 ":inoremap <c-o> <c-x><c-o>
 "inoremap <Tab> <C-R>=CleverTab()<CR>

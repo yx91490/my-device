@@ -36,7 +36,7 @@ deb http://mirrors.ustc.edu.cn/ubuntu/ cosmic-security main restricted universe 
 	#deb http://archive.ubuntukylin.com:10006/ubuntukylin bionic main
 	# deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
 	# deb http://ppa.launchpad.net/webupd8team/java/ubuntu wily main
-### 桌面配置
+### Gnome桌面配置
 
 系统设置里设置大号文本:![](./pic/config_big_font.png)
 
@@ -57,6 +57,7 @@ deb http://mirrors.ustc.edu.cn/ubuntu/ cosmic-security main restricted universe 
 ### 命令行配置
 
 ##### ~/.bashrc配置
+详见文件[bashrc](./bashrc)：
 
 ```shell
 # 配置终端提示符颜色：
@@ -113,18 +114,33 @@ alias clang-format='clang-format-3.5'
 alias cformat='clang-format-3.5 -style="{BasedOnStyle: llvm, IndentWidth: 4}" -i'
 
 ```
+##### 其他profile配置：
+
+```bash
+$ ls /etc/profile.d/
+01-locale-fix.sh  bash_completion.sh     gawk.csh  input-method-config.sh  vte.sh
+apps-bin-path.sh  cedilla-portuguese.sh  gawk.sh   vte-2.91.sh             xdg_dirs_desktop_session.sh
+```
+
+```bash
+$ ls /etc/bash_completion.d/
+apport_completion  cheat.bash  cpack  desktop-file-validate  docker      insserv  openvpn
+apt-show-versions  cmake       ctest  dkms                   git-prompt  maven
+pulseaudio
+```
+
 ##### ~/.vimrc配置
 
-见文件[vimrc](./vimrc)
+详见文件[vimrc](./vimrc)。
 
 ### 应用软件
 
-[chrome](https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb) 浏览器
+[Chrome](https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb) 浏览器
 
-[sublime](https://www.sublimetext.com/) 文本编辑器
+[Sublime Text](https://www.sublimetext.com/) 文本编辑器
 
-[typora](https://www.typora.io/linux/Packages) 一个markdown编辑器
+[Typora](https://www.typora.io/linux/Packages) 一个markdown编辑器
 
-[sogoupinyin](https://pinyin.sogou.com/linux/?r=pinyin) 中文输入法
+[SogouPinyin](https://pinyin.sogou.com/linux/?r=pinyin) 中文输入法
 
-thunderbird 邮件客户端
+Thunderbird 邮件客户端
