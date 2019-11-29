@@ -38,21 +38,21 @@ deb http://mirrors.ustc.edu.cn/ubuntu/ cosmic-security main restricted universe 
 	# deb http://ppa.launchpad.net/webupd8team/java/ubuntu wily main
 ### Gnome桌面配置
 
-系统设置里设置大号文本:![](./pic/config_big_font.png)
+系统设置里设置大号文本:![](../pic/config_big_font.png)
 
 配置鼠标和触摸板：
 
-![](./pic/config_mouse.png)
+![](../pic/config_mouse.png)
 
 
 
 使用gnome-tweak-tool配置字体和缩放比例:
 
-![](./pic/config_font.png)
+![](../pic/config_font.png)
 
 安装sierra主题和numix图标，并使用gnome-tweak-tool应用主题和图标：
 
-![](./pic/config_theme.png)
+![](../pic/config_theme.png)
 
 ### 命令行配置
 
