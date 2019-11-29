@@ -50,7 +50,6 @@ alias genpasswd="strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 30 | tr 
 export CHEATCOLORS=true
 
 # java
-export PATH=.:~/.bin:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH=.:~/.bin:/usr/local/opt/mysql-client/bin:$JAVA_HOME/bin:$PATH
