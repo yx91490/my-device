@@ -1,0 +1,24 @@
+deb http://mirrors.ustc.edu.cn/ubuntu/ cosmic main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ cosmic-updates main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ cosmic-proposed main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ cosmic-backports main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ cosmic-security main restricted universe multiverse
+
+
+# deb https://apt.dockerproject.org/repo ubuntu-wily main
+# deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+# deb http://ppa.launchpad.net/hzwhuang/ss-qt5/ubuntu wily main
+# deb https://download.01.org/gfx/ubuntu/16.10/main yakkety main #Intel Graphics drivers
+# deb http://ppa.launchpad.net/moka/daily/ubuntu bionic main
+# deb http://ppa.launchpad.net/nathan-renniewaldock/flux/ubuntu bionic main
+# deb http://ppa.launchpad.net/numix/ppa/ubuntu cosmic main
+# deb http://repo.percona.com/apt yakkety main
+# deb http://repo.percona.com/apt xenial testing
+# deb http://repo.percona.com/apt xenial experimental
+# deb http://repo.percona.com/apt yakkety main
+# deb http://repo.percona.com/apt yakkety testing
+# deb http://repo.percona.com/apt yakkety experimental
+# deb http://ppa.launchpad.net/snwh/pulp/ubuntu zesty main
+# deb http://archive.ubuntukylin.com:10006/ubuntukylin bionic main
+# deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
+# deb http://ppa.launchpad.net/webupd8team/java/ubuntu wily main
