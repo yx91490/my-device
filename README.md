@@ -1,12 +1,17 @@
 # 我的设备配置
 
-[git配置](./gitconfig)
+### 设备
 
-[ssh配置](./ssh.config)
+[笔记本](./device/laptop/README.md)
 
-[各笔记本比较](./laptop.md)
+### 环境配置
 
-[Linux环境配置](./Linux/README.md)
+通用配置
 
-MacOS环境配置
+- [git配置](./profile/common/git/gitconfig)
+- [ssh配置](./profile/common/ssh/ssh.config)
+
+[Linux环境配置](./profile/linux/README.md)
+
+[MacOS环境配置](./profile/macos/README.md)
 

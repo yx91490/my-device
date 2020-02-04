@@ -47,20 +47,20 @@ pulseaudio
 
 ### Gnome桌面配置
 
-系统设置里设置大号文本:![](../pic/config_big_font.png)
+系统设置里设置大号文本:![](./linux.assets/config_big_font.png)
 
 配置鼠标和触摸板：
 
-![](../pic/config_mouse.png)
+![](./linux.assets/config_mouse.png)
 
 
 
 使用gnome-tweak-tool配置字体和缩放比例:
 
-![](../pic/config_font.png)
+![](./linux.assets/config_font.png)
 
 安装sierra主题和numix图标，并使用gnome-tweak-tool应用主题和图标：
 
-![](../pic/config_theme.png)
+![](./linux.assets/config_theme.png)
 
 
