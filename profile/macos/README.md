@@ -47,3 +47,30 @@ Finder -> Services -> Services Preferences，选中 "New Terminal at Folder" 和
 
 - [Mac 键盘快捷键](https://support.apple.com/zh-cn/HT201236)
 - [从Finder快速进入当前目录的命令行](https://blog.csdn.net/yasi_xi/article/details/46799535)
+
+## 删除自带输入法
+
+1. 将文件`~/Library/Preferences/com.apple.HIToolbox.plist`转换为json格式：
+
+```
+plutil -convert json ~/Library/Preferences/com.apple.HIToolbox.plist -o plist.json
+```
+
+2. 删除`AppleEnabledInputSources`数组中除了想要的输入法之外的项：
+
+```json
+{"AppleCurrentKeyboardLayoutInputSourceID":"com.apple.keylayout.US","AppleEnabledInputSources":[{"InputSourceKind":"Input Mode","Bundle ID":"com.sogou.inputmethod.sogou","Input Mode":"com.sogou.inputmethod.pinyin"},{"InputSourceKind":"Keyboard Input Method","Bundle ID":"com.sogou.inputmethod.sogou"}],"AppleCapsLockPressAndHoldToggleOff":false,"AppleGlobalTextInputProperties":{"TextInputGlobalPropertyPerContextInput":false},"AppleDictationAutoEnable":0,"AppleInputSourceHistory":[{"InputSourceKind":"Input Mode","Bundle ID":"com.sogou.inputmethod.sogou","Input Mode":"com.sogou.inputmethod.pinyin"},{"InputSourceKind":"Keyboard Layout","KeyboardLayout Name":"ABC","KeyboardLayout ID":252}],"AppleSelectedInputSources":[{"InputSourceKind":"Non Keyboard Input Method","Bundle ID":"com.apple.PressAndHold"},{"InputSourceKind":"Input Mode","Bundle ID":"com.sogou.inputmethod.sogou","Input Mode":"com.sogou.inputmethod.pinyin"}],"AppleHandwritingDisabledInputSources":["com.apple.inputmethod.SCIM"]}
+```
+
+3. 覆盖原始文件：
+
+```
+plutil -convert xml1 plist.json -o ~/Library/Preferences/com.apple.HIToolbox.plist
+```
+
+4. 关闭下SIP安全设置：
+   1. 重启 Mac，按住 Command+R 键直到 Apple logo 出现，进入 Recovery Mode
+   2. 点击 Utilities -> Terminal
+   3. 在 Terminal 中输入 `csrutil disable`
+   4. 重启 Mac
+
