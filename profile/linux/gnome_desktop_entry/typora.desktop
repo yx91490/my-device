@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=typora
+Comment=a minimal Markdown reading & writing app. Change Log: (https://typora.io/windows/dev_release.html)
+GenericName=Markdown Editor
+Exec="/usr/bin/typora" %f
+Icon=typora
+NoDisplay=true
+StartupWMClass=typora
+StartupNotify=true
+Categories=Office;WordProcessor;
+MimeType=text/markdown;text/x-markdown;
